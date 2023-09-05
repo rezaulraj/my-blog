@@ -1,55 +1,35 @@
 import { useState } from 'react';
 
 const Home = () => {
-  const [name, setName] = useState('harsh');
-
-  const handelClick = () => {
-    setName('Rezaul');
-  };
-
-  const [count, setNumber] = useState(0);
-  const increseNumber = () => {
-    setNumber(count + 1);
-  };
-  const decrementNumber = () => {
-    if (count > 0) setNumber(count - 1);
-  };
-
+  const [blogs, setBlogs] = useState([
+    {
+      title: 'My first created blogs',
+      body: 'Hello! form the New-Yerk...',
+      author: 'cabrio',
+      id: 1,
+    },
+    {
+      title: 'My first created blogs',
+      body: 'Hello! form the New-Yerk...',
+      author: 'cabrio',
+      id: 2,
+    },
+    {
+      title: 'My first created blogs',
+      body: 'Hello! form the New-Yerk...',
+      author: 'cabrio',
+      id: 3,
+    },
+  ]);
   return (
     <div className="home">
-      <h2>HomePage</h2>
-      <p>{name}</p>
-
-      <button onClick={handelClick}>Click me</button>
-      <br />
-      <br />
-      <button
-        onClick={decrementNumber}
-        style={{
-          border: '3px solid red',
-          background: '#333',
-          color: 'white',
-        }}
-      >
-        -
-      </button>
-      <span
-        style={{
-          padding: '0 20px',
-        }}
-      >
-        {count}
-      </span>
-      <button
-        onClick={increseNumber}
-        style={{
-          border: '3px solid green',
-          background: '#333',
-          color: 'white',
-        }}
-      >
-        +
-      </button>
+      {blogs.map((blog) => (
+        <div className="blog-preview" key={blog.id}>
+          <h2>{blog.title}</h2>
+          <span className="author">Witten by : {blog.author}</span>
+          <p>{blog.body}</p>
+        </div>
+      ))}
     </div>
   );
 };
