@@ -1,35 +1,17 @@
-import { useState } from 'react';
-
+// import { useState, useEffect } from 'react';
+import useFatch from './useFatch';
+import BlogList from './BlogList';
 const Home = () => {
-  const [blogs, setBlogs] = useState([
-    {
-      title: 'My first created blogs',
-      body: 'Hello! form the New-Yerk...',
-      author: 'cabrio',
-      id: 1,
-    },
-    {
-      title: 'My first created blogs',
-      body: 'Hello! form the New-Yerk...',
-      author: 'cabrio',
-      id: 2,
-    },
-    {
-      title: 'My first created blogs',
-      body: 'Hello! form the New-Yerk...',
-      author: 'cabrio',
-      id: 3,
-    },
-  ]);
+  const {
+    data: blogs,
+    isPending,
+    error,
+  } = useFatch('http://localhost:8000/blogs');
   return (
     <div className="home">
-      {blogs.map((blog) => (
-        <div className="blog-preview" key={blog.id}>
-          <h2>{blog.title}</h2>
-          <span className="author">Witten by : {blog.author}</span>
-          <p>{blog.body}</p>
-        </div>
-      ))}
+      {error && <div>{error}</div>}
+      {isPending && <div>Loading....</div>}
+      {blogs && <BlogList blogs={blogs} title={'All Blog'} />}
     </div>
   );
 };
