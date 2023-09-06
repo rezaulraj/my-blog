@@ -110,3 +110,8 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+.p-y {
+  padding: 10px 0;
+  font-size: 10px;
+}
