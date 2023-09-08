@@ -11,6 +11,12 @@
       "title": "My First Post",
       "author": "Cherle",
       "body": "JSON is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute value pairs and arrays. It is a common data format with diverse uses in electronic data interchange, including that of web applications with servers.JSON is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute value pairs and arrays. It is a common data format with diverse uses in electronic data interchange, including that of web applications with servers.JSON is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute value pairs and arrays. It is a common data format with diverse uses in electronic data interchange, including that of web applications with servers.JSON is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute value pairs and arrays. It is a common data format with diverse uses in electronic data interchange, including that of web applications with servers."
+    },
+    {
+      "title": "Font-End Development ",
+      "author": "carlo",
+      "body": "A Front-End Developer is someone who creates websites and web applications. The Front-End Developer creates things that the user sees.",
+      "id": 4
     }
   ]
 }
